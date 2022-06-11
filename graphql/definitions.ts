@@ -9,16 +9,8 @@ const definitions = gql`
     title: String,
     cover: String,
     desc: String,
-    assets: [Image!]!,
-    tech: [Tech!]!
-  }
-
-  type Image {
-    src: String!
-  }
-
-  type Tech {
-    stack: [String!]!
+    assets: [String]!,
+    tech: [String]!
   }
 `
 

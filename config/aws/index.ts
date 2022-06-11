@@ -6,7 +6,7 @@ const getProjects = async () => {
   aws.config.update(config.aws_remote_config)
   const DocClient = new aws.DynamoDB.DocumentClient()
   
-  const projects = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     DocClient.scan({
       TableName: config.aws_table_name
     }, (err, data) => {
@@ -19,8 +19,6 @@ const getProjects = async () => {
       }
     })
   })
-
-  return projects
 }
 
 const addProject = async data => {
