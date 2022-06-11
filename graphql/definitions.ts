@@ -5,6 +5,15 @@ const definitions = gql`
     projects: [Project!]!
   }
 
+  type Mutation {
+    addProject(
+      title: String,
+      desc: String,
+      assets: [String]!,
+      tech: [String]!
+    ): Project
+  }
+
   type Project {
     title: String,
     cover: String,

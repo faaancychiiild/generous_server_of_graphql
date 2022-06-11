@@ -7,7 +7,7 @@ const fetchProjects = async () => {
       title: item.title,
       desc: item.desc,
       assets: item.assets,
-      cover: item.assets?.[0],
+      // cover: item.assets?.[0],
       tech: item.tech
     }))
     return data
@@ -19,8 +19,16 @@ const projects = fetchProjects()
 
 const resolvers = {
   Query: {
-    projects() {
+    projects: () => {
       return projects
+    }
+  },
+  Mutation: {
+    addProject: (root, args, context) => {
+      DynamoDB.addProject(args)
+      console.log(root, args, context);
+      
+      return args
     }
   }
 }

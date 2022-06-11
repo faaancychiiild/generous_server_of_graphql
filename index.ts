@@ -9,8 +9,7 @@ server.listen().then(({url}) => console.log(`Server is running on ${url}`))
 
 // DynamoDB.addProject({
 //   title: 'Counter Disinformation',
-//   desc: 'Provides clarity about all the commercial deeds, political parties and individuals',
-//   cover: '/home/pulsar/server-workload/Screenshot from 2022-05-26 15-13-07.png',
+//   desc: 'The Counter Disinformation project is operating in such a way that it is easy for others to be engaged with researching commercial deeds, political parties and individuals. This project guarantees openness, communication, and accountability.',
 //   assets: ['/home/pulsar/server-workload/Screenshot from 2022-05-26 15-13-07.png'],
 //   tech: ['Node.js', 'Neo4J', 'PostgreSQL', 'Socket.io', 'Docker', 'AWS', 'React', 'Redux']
 // })
